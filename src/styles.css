@@ -22,6 +22,11 @@ body {
 main {
   background-color: #000;
   padding: 40px;
+  width: 450px;
+}
+
+.pre-game {
+  width: 550px;
 }
 
 h1 {
@@ -31,11 +36,14 @@ h1 {
 
 .game-controls {
   text-align: center;
+  display: flex;
+  flex-direction: column;
 }
 
 .start-button {
   display: inline-block;
   height: 38px;
+  margin-top: 15px;
   padding: 0 30px;
   color: yellow;
   text-align: center;
@@ -49,21 +57,28 @@ h1 {
 
 .start-button:hover {
   color: greenyellow;
-  font-size: 18px;
+  font-size: 16px;
   border-color: greenyellow;
-  transform: rotate(5deg);
 }
 
 .status {
   font-size: 22px;
 }
 
+.pad span {
+  color: black;
+  font-size: 75px;
+  display: block;
+}
+
 .pad-container {
   display: grid;
   grid-template-rows: 200px 200px;
   grid-template-columns: 200px 200px;
-  grid-gap: 5px;
-  margin: 20px;
+  grid-gap: 0px;
+  width: 400px;
+  height: 400px;
+  margin: 25px auto 25px auto;
 }
 
 .pad-red {
@@ -71,16 +86,21 @@ h1 {
   background-color: red;
 }
 
+.pad-red span {
+  margin-left: 100px;
+  margin-top: 75px;
+}
+
 .pad-red:hover,
 .pad-red:focus {
   background-color: #ff451a;
-  transform: rotate(-5deg);
+  transform: translate(-5px, -5px);
 }
 
 .pad-red:active,
 .pad-red.activated {
   background-color: #ff5c36;
-  transform: translateY(10px);
+  transform: translate(-10px, -10px);
 }
 
 .pad-green {
@@ -88,16 +108,21 @@ h1 {
   background-color: green;
 }
 
+.pad-green span {
+  margin-left: 50px;
+  margin-top: 75px;
+}
+
 .pad-green:hover,
 .pad-green:focus {
   background-color: #8cc218;
-  transform: rotate(5deg);
+  transform: translate(5px, -5px);
 }
 
 .pad-green:active,
 .pad-green.activated {
   background-color: #a0ea00;
-  transform: translateY(10px);
+  transform: translate(10px, -10px);
 }
 
 .pad-yellow {
@@ -105,16 +130,21 @@ h1 {
   background-color: yellow;
 }
 
+.pad-yellow span {
+  margin-left: 50px;
+  margin-top: 25px;
+}
+
 .pad-yellow:hover,
 .pad-yellow:focus {
   background-color: #ffb900;
-  transform: rotate(5deg);
+  transform: translate(5px, 5px);
 }
 
 .pad-yellow:active,
 .pad-yellow.activated {
   background-color: #ffca3d;
-  transform: translateY(10px);
+  transform: translate(10px, 10px);
 }
 
 .pad-blue {
@@ -122,16 +152,21 @@ h1 {
   background-color: blue;
 }
 
+.pad-blue span {
+  margin-left: 100px;
+  margin-top: 25px;
+}
+
 .pad-blue:hover,
 .pad-blue:focus {
   background-color: #139ddd;
-  transform: rotate(5deg);
+  transform: translate(-5px, 5px);
 }
 
 .pad-blue:active,
 .pad-blue.activated {
   background-color: #2bbcff;
-  transform: translateY(10px);
+  transform: translate(-10px, 10px);
 }
 
 .hidden {
